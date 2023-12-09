@@ -138,9 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 100
   hp: 0
-  exp: 1
+  level: 1
   barHP: {fileID: 3680623289341610827}
-  expText: {fileID: 3680623289788344974}
+  levelText: {fileID: 3680623289788344974}
   weapons:
   - {fileID: 1454657768908555664}
   - {fileID: 1454657770088928129}

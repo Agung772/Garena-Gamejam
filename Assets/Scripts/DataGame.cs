@@ -50,11 +50,11 @@ public class DataGame : MonoBehaviour
 
     }
 
-    public void AddHighExp(float value)
+    public void AddHighLevel(float value)
     {
-        if (value > dataClass.highExp)
+        if (value > dataClass.highLevel)
         {
-            dataClass.highExp = value;
+            dataClass.highLevel = value;
         }
     }
 }
@@ -62,7 +62,7 @@ public class DataGame : MonoBehaviour
 [System.Serializable]
 public class DataClass
 {
-    public float highExp;
+    public float highLevel;
 
     public float volumeBGM;
     public float volumeSFX;
