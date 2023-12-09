@@ -35,24 +35,45 @@ public class UIGameplay : MonoBehaviour
         highLevelText.text = "High Level : " + DataGame.instance.dataClass.highLevel;
         levelText.text = "Level : " + characterStat.level;
 
-        LevelManager.instance.active = true;
-        Player.instance.canMove = false;
+        MoveScene(false);
+    }
 
-        WeaponData[] weaponDatas = FindObjectsOfType<WeaponData>();
-        for (int i = 0; i < weaponDatas.Length; i++)
+    public void MoveScene(bool value)
+    {
+        if (value)
         {
-            weaponDatas[i].active = false;
+            LevelManager.instance.active = false;
+            Player.instance.canMove = true;
+
+            WeaponData[] weaponDatas = FindObjectsOfType<WeaponData>();
+            for (int i = 0; i < weaponDatas.Length; i++)
+            {
+                weaponDatas[i].StartRandomActive();
+            }
+
+            NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
+            for (int j = 0; j < nonPlayer.Length; j++)
+            {
+                nonPlayer[j].Active(true);
+            }
         }
-        
-        NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
-        for (int j = 0; j < nonPlayer.Length; j++)
+        else
         {
-            nonPlayer[j].Stop();
+            LevelManager.instance.active = true;
+            Player.instance.canMove = false;
+
+            WeaponData[] weaponDatas = FindObjectsOfType<WeaponData>();
+            for (int i = 0; i < weaponDatas.Length; i++)
+            {
+                weaponDatas[i].active = false;
+            }
+
+            NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
+            for (int j = 0; j < nonPlayer.Length; j++)
+            {
+                nonPlayer[j].Active(false);
+            }
         }
-
-
-
-
     }
 
     public void MovingScene(string nameScene)

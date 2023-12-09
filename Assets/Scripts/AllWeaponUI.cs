@@ -6,7 +6,7 @@ public class AllWeaponUI : MonoBehaviour
 {
     private void Start()
     {
-        Time.timeScale = 0;
+        UIGameplay.instance.MoveScene(false);
     }
 
     private void Update()
@@ -14,7 +14,7 @@ public class AllWeaponUI : MonoBehaviour
         if (Input.anyKeyDown)
         {
             gameObject.SetActive(false);
-            Time.timeScale = 1;
+            UIGameplay.instance.MoveScene(true);
         }
     }
 }

@@ -34,8 +34,8 @@ public class NonPlayer : MonoBehaviour
         }
     }
 
-    public void Stop()
+    public void Active(bool value)
     {
-        agent.enabled = false;
+        agent.enabled = value;
     }
 }
