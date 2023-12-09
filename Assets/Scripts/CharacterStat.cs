@@ -47,7 +47,7 @@ public class CharacterStat : MonoBehaviour
             
             for (int i = 0; i < exp; i++)
             {
-                Vector3 randomV3 = new Vector3(Random.RandomRange(-3f, 3f), 0, 0);
+                Vector3 randomV3 = new Vector3(Random.RandomRange(-3f, 3f), 0.5f, 0);
                 Instantiate(AssetGameplay.instance.expPrefab, transform.position + randomV3, Quaternion.identity);
             }
 
@@ -62,7 +62,7 @@ public class CharacterStat : MonoBehaviour
 
         for (var i = LevelManager.instance.unlockWeapon.Length - 1; i >= 0; i--)
         {
-            if (exp > LevelManager.instance.unlockWeapon[i] && !unlock[i])
+            if (exp >= LevelManager.instance.unlockWeapon[i] && !unlock[i])
             {
                 weapons[i].SetActive(true);
                 unlock[i] = true;

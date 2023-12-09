@@ -11,6 +11,6 @@ public class AssetGameplay : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        instance = this;
     }
 }
