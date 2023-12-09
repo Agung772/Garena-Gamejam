@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6940549087829664286, guid: 3de7844d76b1c60419718d3a2acd6eae, type: 3}
+  m_Sprite: {fileID: 6197637996934907700, guid: ed3dc5173a4afe041a354725270f854b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4369,6 +4369,7 @@ MonoBehaviour:
   maxTime: 60
   gameTime: 0
   unlockWeapon: 000000000a00000019000000
+  active: 0
 --- !u!4 &1709719864
 Transform:
   m_ObjectHideFlags: 0
@@ -4872,8 +4873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -27}
-  m_SizeDelta: {x: 174.3571, y: 174.3571}
+  m_AnchoredPosition: {x: 50.00001, y: -26.118}
+  m_SizeDelta: {x: 172.8804, y: 172.8804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938824172
 MonoBehaviour:

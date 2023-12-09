@@ -54,4 +54,9 @@ public class UIGameplay : MonoBehaviour
 
 
     }
+
+    public void MovingScene(string nameScene)
+    {
+        GameManager.instance.MovingScene(nameScene);
+    }
 }
