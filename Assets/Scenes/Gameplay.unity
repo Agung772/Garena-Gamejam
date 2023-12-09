@@ -1741,8 +1741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.9, y: -139.38199}
-  m_SizeDelta: {x: 201.0676, y: 44.1193}
+  m_AnchoredPosition: {x: 50.000008, y: -144.55412}
+  m_SizeDelta: {x: 220.2171, y: 48.3212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611238296
 MonoBehaviour:
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game time : 00:00'
+  m_text: 'Game time : 01:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1672288f32adb0468c5e902de6ddf58, type: 2}
   m_sharedMaterial: {fileID: 477472337204459934, guid: e1672288f32adb0468c5e902de6ddf58, type: 2}
@@ -2783,8 +2783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.2446, y: -31.2446}
-  m_SizeDelta: {x: 162.4892, y: 162.4892}
+  m_AnchoredPosition: {x: 51.472626, y: -26.11789}
+  m_SizeDelta: {x: 177.9645, y: 177.9645}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072400768
 MonoBehaviour:
@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6940549087829664286, guid: 3de7844d76b1c60419718d3a2acd6eae, type: 3}
+  m_Sprite: {fileID: 6197637996934907700, guid: ed3dc5173a4afe041a354725270f854b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4369,6 +4369,7 @@ MonoBehaviour:
   maxTime: 60
   gameTime: 0
   unlockWeapon: 000000000a00000019000000
+  active: 0
 --- !u!4 &1709719864
 Transform:
   m_ObjectHideFlags: 0
@@ -4872,8 +4873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.900002, y: -32.05}
-  m_SizeDelta: {x: 159.1955, y: 159.1955}
+  m_AnchoredPosition: {x: 50.00001, y: -26.118}
+  m_SizeDelta: {x: 172.8804, y: 172.8804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938824172
 MonoBehaviour:
@@ -4888,7 +4889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3339622, g: 1, b: 0.34274837, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

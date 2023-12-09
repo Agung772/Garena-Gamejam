@@ -28,13 +28,14 @@ public class UIGameplay : MonoBehaviour
         gameoverUI.SetActive(true);
 
         AudioManager.instance.SetSFX(AudioManager.instance.SFXGameover);
-
+        
         CharacterStat characterStat = Player.instance.GetComponent<CharacterStat>();
         DataGame.instance.AddHighLevel(characterStat.level);
 
         highLevelText.text = "High Level : " + DataGame.instance.dataClass.highLevel;
         levelText.text = "Level : " + characterStat.level;
 
+        LevelManager.instance.active = true;
         Player.instance.canMove = false;
 
         WeaponData[] weaponDatas = FindObjectsOfType<WeaponData>();
@@ -44,7 +45,7 @@ public class UIGameplay : MonoBehaviour
         }
         
         NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
-        for (int j = 0; j < characterStat.weapons.Length; j++)
+        for (int j = 0; j < nonPlayer.Length; j++)
         {
             nonPlayer[j].Stop();
         }
@@ -52,5 +53,10 @@ public class UIGameplay : MonoBehaviour
 
 
 
+    }
+
+    public void MovingScene(string nameScene)
+    {
+        GameManager.instance.MovingScene(nameScene);
     }
 }

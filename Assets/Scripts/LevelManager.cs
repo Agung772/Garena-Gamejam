@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
 
     public int[] unlockWeapon;
 
+    public bool active;
+
     private void Awake()
     {
         instance = this;
@@ -20,6 +22,8 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         uIGameplay = UIGameplay.instance;
+
+        gameTime = maxTime;
     }
     private void Update()
     {
@@ -34,13 +38,14 @@ public class LevelManager : MonoBehaviour
         float detik = Mathf.FloorToInt(gameTime % 60);
         uIGameplay.gameTimeText.text = "Game time : " + string.Format("{0:00}:{1:00}", menit, detik);
 
-        if (gameTime >= maxTime)
+        if (gameTime <= 0 && !active)
         {
+            active = true;
             uIGameplay.GameOverUI();
         }
-        else
+        else if (gameTime > 0 && !active)
         {
-            gameTime += Time.deltaTime;
+            gameTime -= Time.deltaTime;
         }
     }
 }
