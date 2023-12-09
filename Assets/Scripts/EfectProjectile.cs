@@ -9,7 +9,7 @@ public class EfectProjectile : MonoBehaviour
 
     private void Start()
     {
-        efectSpawn.Play();
+        if (efectSpawn != null) efectSpawn.Play();
         Destroy(gameObject, 5f);
     }
 
@@ -19,9 +19,9 @@ public class EfectProjectile : MonoBehaviour
         IEnumerator Coroutine()
         {
             yield return new WaitForSeconds(time);
-            efeckPerticle.Stop();
-            efeckPerticle.transform.parent = null;
-            Destroy(efeckPerticle.gameObject, 2);
+            if (efeckPerticle != null) efeckPerticle.Stop();
+            if (efeckPerticle != null) efeckPerticle.transform.parent = null;
+            if (efeckPerticle != null) Destroy(efeckPerticle.gameObject, 2);
 
             Destroy(gameObject);
         }

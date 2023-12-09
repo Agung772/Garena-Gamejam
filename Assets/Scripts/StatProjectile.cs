@@ -5,13 +5,13 @@ using UnityEngine;
 public class StatProjectile : MonoBehaviour
 {
     public int damage;
-    public int exp;
+    public int level;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CharacterStat>())
         {
-            other.GetComponent<CharacterStat>().Hit(damage, exp);
+            other.GetComponent<CharacterStat>().Hit(damage, level);
             GetComponent<EfectProjectile>().Stop(0);
         }
     }

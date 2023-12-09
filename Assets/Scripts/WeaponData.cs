@@ -41,7 +41,7 @@ public class WeaponData : MonoBehaviour
             projectile.GetComponent<Rigidbody>().AddForce(point.forward * forceSpeed, ForceMode.Impulse);
 
             projectile.GetComponent<StatProjectile>().damage = damage;
-            projectile.GetComponent<StatProjectile>().exp = characterStat.exp;
+            projectile.GetComponent<StatProjectile>().level = characterStat.level;
             projectile.GetComponent<EfectProjectile>().Stop(range);
 
 

@@ -19523,6 +19523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  exp: 0
 --- !u!114 &8835429835867052856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19569,7 +19570,7 @@ CapsuleCollider:
   m_Radius: 0.02
   m_Height: 0.09
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0.8}
 --- !u!1 &4199494969445046929
 GameObject:
   m_ObjectHideFlags: 0
