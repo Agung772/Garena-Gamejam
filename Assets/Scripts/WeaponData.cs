@@ -25,7 +25,7 @@ public class WeaponData : MonoBehaviour
     public GameObject projectilePrefab;
 
     bool cooldown;
-    bool active;
+    public bool active;
 
     public AudioSource audioSource;
 

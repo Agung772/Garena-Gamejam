@@ -754,6 +754,10 @@ PrefabInstance:
       propertyPath: characterStat
       value: 
       objectReference: {fileID: 3680623289533094578}
+    - target: {fileID: 2827074094871531874, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 4425556515076701428, guid: 3c52c91bde1ecea4f8e14468da37f19d, type: 3}
     - target: {fileID: 2827074094871531900, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
       propertyPath: m_Name
       value: Weapon (2)
@@ -837,6 +841,10 @@ PrefabInstance:
       propertyPath: characterStat
       value: 
       objectReference: {fileID: 3680623289533094578}
+    - target: {fileID: 2827074094871531874, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 3120602433173521508, guid: 9570fcf366c157543a672fb347b17bd6, type: 3}
     - target: {fileID: 2827074094871531900, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
       propertyPath: m_Name
       value: WeaponDefault
@@ -924,6 +932,10 @@ PrefabInstance:
       propertyPath: characterStat
       value: 
       objectReference: {fileID: 3680623289533094578}
+    - target: {fileID: 2827074094871531874, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 6016500303347513068, guid: 358fa931babddf143b9fac359ec863d1, type: 3}
     - target: {fileID: 2827074094871531900, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
       propertyPath: m_Name
       value: Weapon (1)

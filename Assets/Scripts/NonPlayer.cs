@@ -15,6 +15,7 @@ public class NonPlayer : MonoBehaviour
 
     private void Update()
     {
+        if (!agent.enabled) return;
         if (agent.remainingDistance < 0.5f)
         {
             float setRandom = 30;
@@ -31,5 +32,10 @@ public class NonPlayer : MonoBehaviour
                 GetComponent<NonPlayerFlip>().SetFlip("Right");
             }
         }
+    }
+
+    public void Stop()
+    {
+        agent.enabled = false;
     }
 }

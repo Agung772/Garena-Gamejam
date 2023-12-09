@@ -34,5 +34,21 @@ public class UIGameplay : MonoBehaviour
         levelText.text = "Level : " + characterStat.level;
 
         Player.instance.canMove = false;
+
+        WeaponData[] weaponDatas = FindObjectsOfType<WeaponData>();
+        for (int i = 0; i < weaponDatas.Length; i++)
+        {
+            weaponDatas[i].active = false;
+        }
+        
+        NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
+        for (int j = 0; j < characterStat.weapons.Length; j++)
+        {
+            nonPlayer[j].Stop();
+        }
+
+
+
+
     }
 }
