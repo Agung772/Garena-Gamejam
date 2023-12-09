@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
 
     void GameTime()
     {
-        gameTime += Time.deltaTime;
+
 
         float menit = Mathf.FloorToInt(gameTime / 60);
         float detik = Mathf.FloorToInt(gameTime % 60);
@@ -37,6 +37,10 @@ public class LevelManager : MonoBehaviour
         if (gameTime >= maxTime)
         {
             uIGameplay.GameOverUI();
+        }
+        else
+        {
+            gameTime += Time.deltaTime;
         }
     }
 }

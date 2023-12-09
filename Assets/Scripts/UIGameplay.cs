@@ -27,5 +27,6 @@ public class UIGameplay : MonoBehaviour
         highLevelText.text = "High Level : " + DataGame.instance.dataClass.highLevel;
         levelText.text = "Level : " + characterStat.level;
 
+        Player.instance.canMove = false;
     }
 }
