@@ -7,10 +7,10 @@ public class CharacterStat : MonoBehaviour
 {
     [SerializeField] float maxHp;
     [SerializeField] float hp;
-    public int exp = 1;
+    public int level = 1;
 
     [SerializeField] Image barHP;
-    [SerializeField] TextMeshProUGUI expText;
+    [SerializeField] TextMeshProUGUI levelText;
 
     [SerializeField] GameObject[] weapons;
     bool[] unlock;
@@ -32,8 +32,8 @@ public class CharacterStat : MonoBehaviour
     public void Hit(float amountDamage, float amountExp)
     {
         float damageBonus = 0;
-        if (exp > amountExp) damageBonus = 0;
-        else damageBonus =  amountExp - exp;
+        if (level > amountExp) damageBonus = 0;
+        else damageBonus =  amountExp - level;
 
 
         hp -= amountDamage + damageBonus;
@@ -45,11 +45,13 @@ public class CharacterStat : MonoBehaviour
         {
             hp = 0;
             
-            for (int i = 0; i < exp; i++)
+            for (int i = 0; i < level; i++)
             {
                 Vector3 randomV3 = new Vector3(Random.RandomRange(-3f, 3f), 0.5f, 0);
                 Instantiate(AssetGameplay.instance.expPrefab, transform.position + randomV3, Quaternion.identity);
             }
+
+            if (GetComponent<Player>()) UIGameplay.instance.GameOverUI();
 
             Destroy(gameObject);
         }
@@ -57,12 +59,12 @@ public class CharacterStat : MonoBehaviour
 
     public void AddExp(int value)
     {
-        exp += value;
-        expText.text = "Exp " + exp;
+        level += value;
+        levelText.text = "Level " + level;
 
         for (var i = LevelManager.instance.unlockWeapon.Length - 1; i >= 0; i--)
         {
-            if (exp >= LevelManager.instance.unlockWeapon[i] && !unlock[i])
+            if (level >= LevelManager.instance.unlockWeapon[i] && !unlock[i])
             {
                 weapons[i].SetActive(true);
                 unlock[i] = true;
