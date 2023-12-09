@@ -10,6 +10,7 @@ public class Exp : MonoBehaviour
         if (other.GetComponent<CharacterStat>())
         {
             other.GetComponent<CharacterStat>().AddExp(expAmount);
+            SpawnExp.instance.currentExp -= 1;
             Destroy(gameObject);
         }
     }
