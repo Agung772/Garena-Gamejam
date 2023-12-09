@@ -20,8 +20,9 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         LoadVolume();
-        sliderBGM.value = audioSourceBGM.volume;
-        sliderSFX.value = audioSourceSFX.volume;
+        if (sliderBGM != null) sliderBGM.value = audioSourceBGM.volume;
+        if (sliderSFX != null) sliderSFX.value = audioSourceSFX.volume;
+
     }
 
     void LoadVolume()
@@ -47,24 +48,17 @@ public class AudioManager : MonoBehaviour
     public AudioClip mainmenuBgm;
     public AudioClip gameplayBgm;
 
-    [Header("SFX")]
-    public AudioClip SFXClickButton;
-    public AudioClip SFXCicak;
-    public AudioClip SFXPlayerWalk;
-    public AudioClip SFXFail;
-    public AudioClip SFXComplete;
-    public AudioClip SFXSignal;
 
-    public void SetBGM(string value)
+    public void SetBGM(AudioClip value)
     {
-        if (audioSourceBGM.clip.name == value) return;
+        if (audioSourceBGM.clip == value) return;
 
-        if (value == mainmenuBgm.name)
+        if (value == mainmenuBgm)
         {
             audioSourceBGM.clip = mainmenuBgm;
             audioSourceBGM.Play();
         }
-        else if (value == gameplayBgm.name)
+        else if (value == gameplayBgm)
         {
             audioSourceBGM.clip = gameplayBgm;
             audioSourceBGM.Play();
@@ -74,22 +68,44 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Missing Audio : " + value);
         }
     }
+    [Header("SFX")]
+    public AudioClip SFXExp;
+    public AudioClip SFXClickButton;
+    public AudioClip SFXCicak;
+    public AudioClip SFXPlayerWalk;
+    public AudioClip SFXFail;
+    public AudioClip SFXComplete;
+    public AudioClip SFXSignal;
 
-    public void SetSFX(string value)
+    bool cdExp;
+    public void SetSFX(AudioClip value)
     {
-        if (value == SFXComplete.name)
+        if (value == SFXExp)
+        {
+            if (cdExp) return;
+            cdExp = true;
+            audioSourceSFX.PlayOneShot(SFXExp);
+
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                yield return new WaitForSeconds(0.5f);
+                cdExp = false;
+            }
+        }
+        else if (value == SFXComplete)
         {
             audioSourceSFX.PlayOneShot(SFXComplete);
         }
-        else if (value == SFXFail.name)
+        else if (value == SFXFail)
         {
             audioSourceSFX.PlayOneShot(SFXFail);
         }
-        else if (value == SFXClickButton.name)
+        else if (value == SFXClickButton)
         {
             audioSourceSFX.PlayOneShot(SFXClickButton);
         }
-        else if (value == SFXSignal.name)
+        else if (value == SFXSignal)
         {
             audioSourceSFX.PlayOneShot(SFXSignal);
         }

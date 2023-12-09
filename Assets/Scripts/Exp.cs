@@ -11,6 +11,9 @@ public class Exp : MonoBehaviour
         {
             other.GetComponent<CharacterStat>().AddExp(expAmount);
             SpawnExp.instance.currentExp -= 1;
+
+            if (other.GetComponent<Player>()) AudioManager.instance.SetSFX(AudioManager.instance.SFXExp);
+
             Destroy(gameObject);
         }
     }
