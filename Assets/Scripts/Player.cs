@@ -54,22 +54,27 @@ public class Player : MonoBehaviour
     void Move()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0f)
         {
             velocity.y = -2f;
         }
+        //move = new Vector3(horizontal, 0f, vertical).normalized;
+        //if (move.magnitude >= 0.1f)
+        //{
+        //    float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
+        //    float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        //    transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        //    Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        //    characterController.Move(moveDirection.normalized * movementSpeed * Time.deltaTime);
+        //}
         move = new Vector3(horizontal, 0f, vertical).normalized;
         if (move.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            characterController.Move(moveDirection.normalized * movementSpeed * Time.deltaTime);
+            characterController.Move(move.normalized * movementSpeed * Time.deltaTime);
         }
-
         if (Input.GetKey(KeyCode.Space) && Time.time > canJump && countJump > 0)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
