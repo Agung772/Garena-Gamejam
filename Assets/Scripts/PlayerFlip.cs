@@ -9,6 +9,9 @@ public class PlayerFlip : MonoBehaviour
     string flip;
 
     public Transform[] flipTranforms;
+
+    [SerializeField] Animator animator;
+
     private void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
