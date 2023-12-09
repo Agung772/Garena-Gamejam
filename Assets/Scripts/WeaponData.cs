@@ -6,6 +6,16 @@ public class WeaponData : MonoBehaviour
 {
     public CharacterStat characterStat;
 
+    [System.Serializable]
+    public enum TypeWeapon
+    {
+        piscok,
+        bregedeg,
+        basokha
+    }
+
+    public TypeWeapon typeWeapon;
+
     public int damage;
     public float forceSpeed;
     public float atkSpeed;
@@ -15,7 +25,9 @@ public class WeaponData : MonoBehaviour
     public GameObject projectilePrefab;
 
     bool cooldown;
-    bool active;
+    public bool active;
+
+    public AudioSource audioSource;
 
     private void OnEnable()
     {
@@ -44,6 +56,11 @@ public class WeaponData : MonoBehaviour
             projectile.GetComponent<StatProjectile>().level = characterStat.level;
             projectile.GetComponent<EfectProjectile>().Stop(range);
 
+
+            //Audio
+            if (typeWeapon == TypeWeapon.piscok) audioSource.PlayOneShot(AudioManager.instance.SFXPiscok);
+            else if (typeWeapon == TypeWeapon.bregedeg) audioSource.PlayOneShot(AudioManager.instance.SFXBregedeg);
+            else if (typeWeapon == TypeWeapon.basokha) audioSource.PlayOneShot(AudioManager.instance.SFXBasokha);
 
             StartCoroutine(Coroutine());
             IEnumerator Coroutine()

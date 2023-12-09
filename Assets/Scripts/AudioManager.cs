@@ -71,10 +71,12 @@ public class AudioManager : MonoBehaviour
     [Header("SFX")]
     public AudioClip SFXExp;
     public AudioClip SFXClickButton;
-    public AudioClip SFXCicak;
+    public AudioClip SFXPiscok;
+    public AudioClip SFXBregedeg;
+    public AudioClip SFXBasokha;
     public AudioClip SFXPlayerWalk;
-    public AudioClip SFXFail;
-    public AudioClip SFXComplete;
+    public AudioClip SFXHit;
+    public AudioClip SFXGameover;
     public AudioClip SFXSignal;
 
     bool cdExp;
@@ -93,21 +95,25 @@ public class AudioManager : MonoBehaviour
                 cdExp = false;
             }
         }
-        else if (value == SFXComplete)
+        else if (value == SFXGameover)
         {
-            audioSourceSFX.PlayOneShot(SFXComplete);
+            audioSourceSFX.PlayOneShot(SFXGameover);
         }
-        else if (value == SFXFail)
+        else if (value == SFXPiscok)
         {
-            audioSourceSFX.PlayOneShot(SFXFail);
+            audioSourceSFX.PlayOneShot(SFXPiscok);
         }
-        else if (value == SFXClickButton)
+        else if (value == SFXBregedeg)
         {
-            audioSourceSFX.PlayOneShot(SFXClickButton);
+            audioSourceSFX.PlayOneShot(SFXBregedeg);
         }
-        else if (value == SFXSignal)
+        else if (value == SFXBasokha)
         {
-            audioSourceSFX.PlayOneShot(SFXSignal);
+            audioSourceSFX.PlayOneShot(SFXBasokha);
+        }
+        else if (value == SFXHit)
+        {
+            audioSourceSFX.PlayOneShot(SFXHit);
         }
         else
         {
@@ -120,13 +126,13 @@ public class AudioManager : MonoBehaviour
     AudioSource audioSourcePolisiSfx;
     public void SetLoopSfx(string value, bool condition)
     {
-        if (value == SFXComplete.name)
+        if (value == SFXGameover.name)
         {
             if (audioSourcePlayerWalk == null) audioSourcePlayerWalk = Instantiate(audioSourceBGM, transform);
             audioSourcePlayerWalk.name = "AudioSource " + value;
             if (condition)
             {
-                audioSourcePlayerWalk.clip = SFXComplete;
+                audioSourcePlayerWalk.clip = SFXGameover;
                 audioSourcePlayerWalk.Play();
                 audioSourcePlayerWalk.volume = 0.4f;
             }

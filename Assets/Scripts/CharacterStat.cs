@@ -12,13 +12,15 @@ public class CharacterStat : MonoBehaviour
     [SerializeField] Image barHP;
     [SerializeField] TextMeshProUGUI levelText;
 
-    [SerializeField] GameObject[] weapons;
+    public GameObject[] weapons;
     bool[] unlock;
     private void Start()
     {
         hp = maxHp;
         unlock = new bool[weapons.Length];
-        AddExp(0);
+
+        if(GetComponent<Player>() == null) AddExp(Random.Range(0, 15));
+        else AddExp(0);
 
 
         for (int i = 0; i < weapons.Length; i++)
@@ -40,6 +42,7 @@ public class CharacterStat : MonoBehaviour
         barHP.fillAmount = hp / maxHp;
 
         Debug.Log("Damage bonus " + damageBonus + " Total damage " + (amountDamage + damageBonus));
+        AudioManager.instance.SetSFX(AudioManager.instance.SFXHit);
 
         if (hp <= 0)
         {

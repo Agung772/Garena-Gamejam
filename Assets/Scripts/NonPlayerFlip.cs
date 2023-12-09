@@ -18,6 +18,7 @@ public class NonPlayerFlip : MonoBehaviour
             {
                 flipTranforms[i].transform.localPosition = new Vector3(0, 0, -0.05f);
                 flipTranforms[i].transform.rotation = Quaternion.Euler(0, 0, 0);
+                animator.SetBool("Right", true);
             }
         }
         else if (value == "Left")
@@ -26,6 +27,7 @@ public class NonPlayerFlip : MonoBehaviour
             {
                 flipTranforms[i].transform.localPosition = new Vector3(0, 0, -0.05f);
                 flipTranforms[i].transform.rotation = Quaternion.Euler(0, 180, 0);
+                animator.SetBool("Right", false);
             }
         }
     }
