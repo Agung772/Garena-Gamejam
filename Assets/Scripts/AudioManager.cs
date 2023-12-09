@@ -71,7 +71,9 @@ public class AudioManager : MonoBehaviour
     [Header("SFX")]
     public AudioClip SFXExp;
     public AudioClip SFXClickButton;
-    public AudioClip SFXCicak;
+    public AudioClip SFXPiscok;
+    public AudioClip SFXBregedeg;
+    public AudioClip SFXBasokha;
     public AudioClip SFXPlayerWalk;
     public AudioClip SFXFail;
     public AudioClip SFXComplete;
@@ -97,17 +99,17 @@ public class AudioManager : MonoBehaviour
         {
             audioSourceSFX.PlayOneShot(SFXComplete);
         }
-        else if (value == SFXFail)
+        else if (value == SFXPiscok)
         {
-            audioSourceSFX.PlayOneShot(SFXFail);
+            audioSourceSFX.PlayOneShot(SFXPiscok);
         }
-        else if (value == SFXClickButton)
+        else if (value == SFXBregedeg)
         {
-            audioSourceSFX.PlayOneShot(SFXClickButton);
+            audioSourceSFX.PlayOneShot(SFXBregedeg);
         }
-        else if (value == SFXSignal)
+        else if (value == SFXBasokha)
         {
-            audioSourceSFX.PlayOneShot(SFXSignal);
+            audioSourceSFX.PlayOneShot(SFXBasokha);
         }
         else
         {
