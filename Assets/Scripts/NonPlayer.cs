@@ -18,15 +18,17 @@ public class NonPlayer : MonoBehaviour
         if (agent.remainingDistance < 0.5f)
         {
             float setRandom = 30;
-            agent.SetDestination(new Vector3(Random.Range(-setRandom, setRandom), 0, Random.Range(-setRandom, setRandom)));
 
-            if (transform.position.x >= agent.steeringTarget.x)
+            Vector3 target = new Vector3(Random.Range(-setRandom, setRandom), 0, Random.Range(-setRandom, setRandom));
+            agent.SetDestination(target);
+
+            if (transform.position.x > target.x)
             {
-                GetComponent<NonPlayerFlip>().SetFlip("Right");
+                GetComponent<NonPlayerFlip>().SetFlip("Left");
             }
             else
             {
-                GetComponent<NonPlayerFlip>().SetFlip("Left");
+                GetComponent<NonPlayerFlip>().SetFlip("Right");
             }
         }
     }
