@@ -13,4 +13,8 @@ public class UIGameplay : MonoBehaviour
         if (instance == null) instance = this;
     }
 
+    public void GameOverUI()
+    {
+
+    }
 }

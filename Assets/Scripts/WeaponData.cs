@@ -36,7 +36,6 @@ public class WeaponData : MonoBehaviour
         if (!cooldown)
         {
             cooldown = true;
-            Debug.Log("Shoot");
 
             GameObject projectile = Instantiate(projectilePrefab, point.position, point.rotation);
             projectile.GetComponent<Rigidbody>().AddForce(point.forward * forceSpeed, ForceMode.Impulse);

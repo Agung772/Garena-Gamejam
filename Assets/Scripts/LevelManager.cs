@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager instance;
+
     public float gameTime;
 
     UIGameplay uIGameplay;
+
+    public int[] unlockWeapon;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         uIGameplay = UIGameplay.instance;
