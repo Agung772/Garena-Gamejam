@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: fbb0a85ccd7ccf4478576b14c3405fe4
+guid: 3de7844d76b1c60419718d3a2acd6eae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4686747594472163435
-    second: Enemy bar_0
-  - first:
-      213: -9088057548938846954
-    second: Enemy bar_1
+      213: -6940549087829664286
+    second: Character hp kosong_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy bar_0
+      name: Character hp kosong_1
       rect:
         serializedVersion: 2
-        x: 360
-        y: 5206
-        width: 3654
-        height: 239
+        x: 85
+        y: 45
+        width: 1574
+        height: 1697
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,29 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b680e601b1caa0140800000000000000
-      internalID: 4686747594472163435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy bar_1
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 4718
-        width: 3640
-        height: 232
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61d51315fcbb0e180800000000000000
-      internalID: -9088057548938846954
+      spriteID: 2ed50c190673eaf90800000000000000
+      internalID: -6940549087829664286
       vertices: []
       indices: 
       edges: []
@@ -189,7 +165,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ea7380960d7ad1547af9da80a6cef5ad
     internalID: 0
     vertices: []
     indices: 
