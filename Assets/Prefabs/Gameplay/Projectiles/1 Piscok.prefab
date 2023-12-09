@@ -1312,8 +1312,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9622642, g: 0.18757686, b: 0.13072263, a: 1}
-        key1: {r: 0.83848643, g: 1, b: 0, a: 1}
+        key0: {r: 0.9811321, g: 0, b: 0.9316851, a: 1}
+        key1: {r: 0.15136719, g: 1, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0.9019608}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 5710474326976080046}
   - component: {fileID: 2899621002661484998}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: 1 Piscok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6213,8 +6213,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8584906, g: 0.10852615, b: 0.23328122, a: 0}
-        key1: {r: 0.9433962, g: 0.9247238, b: 0.22605905, a: 1}
+        key0: {r: 0.60707355, g: 0.07058823, b: 0.8666667, a: 0}
+        key1: {r: 1, g: 0, b: 0.3275633, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
