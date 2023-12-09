@@ -1312,8 +1312,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9811321, g: 0, b: 0.9316851, a: 1}
-        key1: {r: 0.15136719, g: 1, b: 0, a: 1}
+        key0: {r: 0.98039216, g: 0, b: 0.08756787, a: 1}
+        key1: {r: 0.5411765, g: 0, b: 0.26002407, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0.9019608}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 5710474326976080046}
   - component: {fileID: 2899621002661484998}
   m_Layer: 0
-  m_Name: 1 Piscok
+  m_Name: 1 Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6213,10 +6213,10 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8666667, g: 0.07058823, b: 0.7601753, a: 0}
-        key1: {r: 1, g: 0, b: 0.3275633, a: 1}
+        key0: {r: 0.58431375, g: 0.0658597, b: 0.10931365, a: 0}
+        key1: {r: 0.6981132, g: 0, b: 0.02305837, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 1}
-        key3: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 1}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -6231,15 +6231,15 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 7710
-        atime2: 60716
-        atime3: 65535
-        atime4: 0
+        atime2: 51657
+        atime3: 60716
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 4
+        m_NumAlphaKeys: 5
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
