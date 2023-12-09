@@ -57,8 +57,8 @@ MonoBehaviour:
   SFXBregedeg: {fileID: 8300000, guid: ce780ddb5da6efc42a899f79c7dd3e28, type: 3}
   SFXBasokha: {fileID: 8300000, guid: 9cf6c9e0a60345843aba243c44078524, type: 3}
   SFXPlayerWalk: {fileID: 0}
-  SFXFail: {fileID: 0}
-  SFXComplete: {fileID: 0}
+  SFXHit: {fileID: 8300000, guid: 6bdb2a89185021f4582fc6878fe5dc1f, type: 3}
+  SFXGameover: {fileID: 8300000, guid: 81507b74db0e68249a2b3711809057f5, type: 3}
   SFXSignal: {fileID: 0}
 --- !u!1 &3190401334932181675
 GameObject:

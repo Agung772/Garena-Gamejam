@@ -42,6 +42,7 @@ public class CharacterStat : MonoBehaviour
         barHP.fillAmount = hp / maxHp;
 
         Debug.Log("Damage bonus " + damageBonus + " Total damage " + (amountDamage + damageBonus));
+        AudioManager.instance.SetSFX(AudioManager.instance.SFXHit);
 
         if (hp <= 0)
         {

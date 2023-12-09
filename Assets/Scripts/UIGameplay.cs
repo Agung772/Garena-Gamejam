@@ -27,6 +27,8 @@ public class UIGameplay : MonoBehaviour
     {
         gameoverUI.SetActive(true);
 
+        AudioManager.instance.SetSFX(AudioManager.instance.SFXGameover);
+
         CharacterStat characterStat = Player.instance.GetComponent<CharacterStat>();
         DataGame.instance.AddHighLevel(characterStat.level);
 

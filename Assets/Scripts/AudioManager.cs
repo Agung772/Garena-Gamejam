@@ -75,8 +75,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip SFXBregedeg;
     public AudioClip SFXBasokha;
     public AudioClip SFXPlayerWalk;
-    public AudioClip SFXFail;
-    public AudioClip SFXComplete;
+    public AudioClip SFXHit;
+    public AudioClip SFXGameover;
     public AudioClip SFXSignal;
 
     bool cdExp;
@@ -95,9 +95,9 @@ public class AudioManager : MonoBehaviour
                 cdExp = false;
             }
         }
-        else if (value == SFXComplete)
+        else if (value == SFXGameover)
         {
-            audioSourceSFX.PlayOneShot(SFXComplete);
+            audioSourceSFX.PlayOneShot(SFXGameover);
         }
         else if (value == SFXPiscok)
         {
@@ -111,6 +111,10 @@ public class AudioManager : MonoBehaviour
         {
             audioSourceSFX.PlayOneShot(SFXBasokha);
         }
+        else if (value == SFXHit)
+        {
+            audioSourceSFX.PlayOneShot(SFXHit);
+        }
         else
         {
             Debug.Log("Missing Audio : " + value);
@@ -122,13 +126,13 @@ public class AudioManager : MonoBehaviour
     AudioSource audioSourcePolisiSfx;
     public void SetLoopSfx(string value, bool condition)
     {
-        if (value == SFXComplete.name)
+        if (value == SFXGameover.name)
         {
             if (audioSourcePlayerWalk == null) audioSourcePlayerWalk = Instantiate(audioSourceBGM, transform);
             audioSourcePlayerWalk.name = "AudioSource " + value;
             if (condition)
             {
-                audioSourcePlayerWalk.clip = SFXComplete;
+                audioSourcePlayerWalk.clip = SFXGameover;
                 audioSourcePlayerWalk.Play();
                 audioSourcePlayerWalk.volume = 0.4f;
             }
