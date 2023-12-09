@@ -43,7 +43,6 @@ public class DataGame : MonoBehaviour
         // Data default
         else
         {
-            dataClass.levels[1] = true;
 
             dataClass.volumeBGM = 0.5f;
             dataClass.volumeSFX = 0.8f;
@@ -51,11 +50,11 @@ public class DataGame : MonoBehaviour
 
     }
 
-    public void SetLevelComplete()
+    public void AddHighExp(float value)
     {
-        if (dataClass.levelIndex < dataClass.levels.Length - 1)
+        if (value > dataClass.highExp)
         {
-            dataClass.levels[dataClass.levelIndex + 1] = true;
+            dataClass.highExp = value;
         }
     }
 }
@@ -63,8 +62,7 @@ public class DataGame : MonoBehaviour
 [System.Serializable]
 public class DataClass
 {
-    public int levelIndex;
-    public bool[] levels = new bool[4];
+    public float highExp;
 
     public float volumeBGM;
     public float volumeSFX;
