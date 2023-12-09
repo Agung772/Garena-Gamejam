@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: fbb0a85ccd7ccf4478576b14c3405fe4
+guid: 9a7d4431dc8e31a4eb5e82ca015a06af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4686747594472163435
-    second: Enemy bar_0
-  - first:
-      213: -9088057548938846954
-    second: Enemy bar_1
+      213: 8814549004794763648
+    second: Character hp isi_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy bar_0
+      name: Character hp isi_0
       rect:
         serializedVersion: 2
-        x: 360
-        y: 5206
-        width: 3654
-        height: 239
+        x: 68
+        y: 58
+        width: 1439
+        height: 1660
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,29 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b680e601b1caa0140800000000000000
-      internalID: 4686747594472163435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy bar_1
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 4718
-        width: 3640
-        height: 232
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61d51315fcbb0e180800000000000000
-      internalID: -9088057548938846954
+      spriteID: 089901e4e91935a70800000000000000
+      internalID: 8814549004794763648
       vertices: []
       indices: 
       edges: []
@@ -189,7 +165,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: c7b7b5107b7ce554cbfac3120fac528f
     internalID: 0
     vertices: []
     indices: 

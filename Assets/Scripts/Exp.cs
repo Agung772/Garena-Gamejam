@@ -9,7 +9,7 @@ public class Exp : MonoBehaviour
     {
         if (other.GetComponent<CharacterStat>())
         {
-            other.GetComponent<CharacterStat>().exp += expAmount;
+            other.GetComponent<CharacterStat>().AddExp(expAmount);
             Destroy(gameObject);
         }
     }
