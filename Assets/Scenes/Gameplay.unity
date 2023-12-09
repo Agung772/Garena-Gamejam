@@ -1299,6 +1299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flipTranforms:
   - {fileID: 1430317200}
+  animator: {fileID: 2106685949}
 --- !u!114 &411233836
 MonoBehaviour:
   m_ObjectHideFlags: 0
