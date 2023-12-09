@@ -58,7 +58,6 @@ public class PlayerFlip : MonoBehaviour
         else if (horizontal == 0 && flip != "Idle")
         {
             flip = "Idle";
-
         }
     }
 }

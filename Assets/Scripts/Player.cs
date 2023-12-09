@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 
     CharacterController characterController;
 
-    public Animator animator;
 
     Vector3 move;
     public Vector3 velocity;

@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 2827074094871531874, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
       propertyPath: projectilePrefab
       value: 
-      objectReference: {fileID: 3536625910085116521, guid: 3c52c91bde1ecea4f8e14468da37f19d, type: 3}
+      objectReference: {fileID: 4199494969275766917, guid: bc3d5bd621f5db6469e35967db836f1e, type: 3}
     - target: {fileID: 2827074094871531900, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
       propertyPath: m_Name
       value: WeaponDefault (1)
@@ -854,7 +854,6 @@ MonoBehaviour:
   gravity: -9.81
   groundDistance: 0.25
   maxFallZone: -100
-  animator: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   horizontal: 0
   groundMask:
@@ -3364,6 +3363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60cd774059b60d4e9420d1fade13c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxTime: 60
   gameTime: 0
   unlockWeapon: 000000000a00000014000000
 --- !u!4 &1709719864
@@ -4275,6 +4275,10 @@ PrefabInstance:
       propertyPath: characterStat
       value: 
       objectReference: {fileID: 411233836}
+    - target: {fileID: 2827074094871531874, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 3120602433173521508, guid: 9570fcf366c157543a672fb347b17bd6, type: 3}
     - target: {fileID: 2827074094871531900, guid: 452e17f10a054d5468d17edf56e69736, type: 3}
       propertyPath: m_Name
       value: WeaponDefault
