@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
 
     public int[] unlockWeapon;
 
-    bool active;
+    public bool active;
 
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
             active = true;
             uIGameplay.GameOverUI();
         }
-        else
+        else if (gameTime > 0 && !active)
         {
             gameTime -= Time.deltaTime;
         }

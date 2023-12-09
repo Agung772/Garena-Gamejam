@@ -54,9 +54,16 @@ public class CharacterStat : MonoBehaviour
                 Instantiate(AssetGameplay.instance.expPrefab, transform.position + randomV3, Quaternion.identity);
             }
 
-            if (GetComponent<Player>()) UIGameplay.instance.GameOverUI();
+            if (GetComponent<Player>()) 
+            { 
+                UIGameplay.instance.GameOverUI(); 
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
 
-            Destroy(gameObject);
+
         }
     }
 
