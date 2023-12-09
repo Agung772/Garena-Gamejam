@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 4613999565585747864}
   - component: {fileID: 3967621115771902502}
   - component: {fileID: 5768541263455300430}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: 2 Bregedet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

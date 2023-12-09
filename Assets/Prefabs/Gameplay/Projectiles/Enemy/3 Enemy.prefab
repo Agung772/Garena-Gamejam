@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 3322639740582921600}
   - component: {fileID: 6420876841873920062}
   - component: {fileID: 4474786523902812502}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: 3 Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4876,7 +4876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0096ce6c010c9c74287a276605146880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  efectSentuhan: {fileID: 0}
+  efectSentuhan: {fileID: 2085091936570458450}
   projectile: {fileID: 0}
   efectSpawn: {fileID: 0}
   efeckPerticle: {fileID: 7170658792228874286}
@@ -9779,5 +9779,10 @@ PrefabInstance:
 --- !u!4 &2085091936570458445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+  m_PrefabInstance: {fileID: 511116715067914407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2085091936570458450 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2015472847793912309, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
   m_PrefabInstance: {fileID: 511116715067914407}
   m_PrefabAsset: {fileID: 0}
