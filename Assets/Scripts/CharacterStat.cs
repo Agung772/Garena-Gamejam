@@ -47,7 +47,7 @@ public class CharacterStat : MonoBehaviour
             
             for (int i = 0; i < level; i++)
             {
-                Vector3 randomV3 = new Vector3(Random.RandomRange(-3f, 3f), 0.5f, 0);
+                Vector3 randomV3 = new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.5f, 0);
                 Instantiate(AssetGameplay.instance.expPrefab, transform.position + randomV3, Quaternion.identity);
             }
 
