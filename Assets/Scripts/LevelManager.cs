@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
 
         float menit = Mathf.FloorToInt(gameTime / 60);
         float detik = Mathf.FloorToInt(gameTime % 60);
-        uIGameplay.gameTimeText.text = string.Format("{0:00}:{1:00}", menit, detik);
+        uIGameplay.gameTimeText.text = "Game time : " + string.Format("{0:00}:{1:00}", menit, detik);
 
         if (gameTime >= maxTime)
         {
