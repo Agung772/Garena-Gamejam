@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game time : 00:00'
+  m_text: 'Game time : 01:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1672288f32adb0468c5e902de6ddf58, type: 2}
   m_sharedMaterial: {fileID: 477472337204459934, guid: e1672288f32adb0468c5e902de6ddf58, type: 2}
