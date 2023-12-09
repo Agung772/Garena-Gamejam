@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
     void Move()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0f)
