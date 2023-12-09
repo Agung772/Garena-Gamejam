@@ -1216,6 +1216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd4296fc2406784ca26359feba169ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipTranforms:
+  - {fileID: 1430317200}
 --- !u!114 &411233836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5370,8 +5372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6d815454981e54eb0cc81da88e437f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedSpawn: 0.5
-  scaleX: 30
+  speedSpawn: 0.1
+  maxExp: 100
+  currentExp: 0
+  scaleX: 20
   scaleZ: 20
 --- !u!4 &1530637809
 Transform:
