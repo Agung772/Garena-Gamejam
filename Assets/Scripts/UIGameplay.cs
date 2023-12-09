@@ -9,12 +9,18 @@ public class UIGameplay : MonoBehaviour
     public TextMeshProUGUI gameTimeText;
 
     public GameObject gameoverUI;
+    public GameObject allweaponUI;
     public TextMeshProUGUI highLevelText;
     public TextMeshProUGUI levelText;
 
     private void Awake()
     {
         if (instance == null) instance = this;
+    }
+
+    private void Start()
+    {
+        allweaponUI.SetActive(true);
     }
 
     public void GameOverUI()
@@ -27,5 +33,6 @@ public class UIGameplay : MonoBehaviour
         highLevelText.text = "High Level : " + DataGame.instance.dataClass.highLevel;
         levelText.text = "Level : " + characterStat.level;
 
+        Player.instance.canMove = false;
     }
 }

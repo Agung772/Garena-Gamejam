@@ -34,19 +34,21 @@ public class Player : MonoBehaviour
     public int maxJump;
     int countJump;
     bool onGrounded;
-
+    public bool canMove;
     private void Awake()
     {
         if (instance == null) instance = this;
     }
     private void Start()
     {
+        canMove = true;
         characterController = GetComponent<CharacterController>();
         countJump = maxJump;
     }
 
     private void Update()
     {
+        if (!canMove) return;
         Move();
     }
 
@@ -74,27 +76,27 @@ public class Player : MonoBehaviour
         {
             characterController.Move(move.normalized * movementSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Space) && Time.time > canJump && countJump > 0)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            canJump = Time.time + 0.3f;
-            Debug.Log("Jump");
+        //if (Input.GetKey(KeyCode.Space) && Time.time > canJump && countJump > 0)
+        //{
+        //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        //    canJump = Time.time + 0.3f;
+        //    Debug.Log("Jump");
 
-            onGrounded = false;
+        //    onGrounded = false;
 
-            countJump--;
+        //    countJump--;
 
-            //Animation
+        //    //Animation
 
-            if (countJump == 1)
-            {
+        //    if (countJump == 1)
+        //    {
 
-            }
-            else if (countJump == 0)
-            {
+        //    }
+        //    else if (countJump == 0)
+        //    {
 
-            }
-        }
+        //    }
+        //}
         if (isGrounded && !onGrounded && Time.time > canJump)
         {
             onGrounded = true;
