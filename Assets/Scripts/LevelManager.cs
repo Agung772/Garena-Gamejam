@@ -41,6 +41,7 @@ public class LevelManager : MonoBehaviour
         if (gameTime <= 0 && !active)
         {
             active = true;
+            gameTime = 0;
             uIGameplay.GameOverUI();
         }
         else if (gameTime > 0 && !active)

@@ -29,6 +29,8 @@ public class EfectProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (efectSentuhan != null) efectSentuhan.Play();
+        if (efectSentuhan != null) efectSentuhan.transform.parent = null;
+        if (efectSentuhan != null) Destroy(efectSentuhan.gameObject, 2);
     }
 }
