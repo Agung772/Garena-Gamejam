@@ -21,8 +21,7 @@ public class CharacterStat : MonoBehaviour
         hp = maxHp;
         unlock = new bool[weapons.Length];
 
-        if(GetComponent<Player>() == null) AddExp(Random.Range(0, 15));
-        else AddExp(0);
+
 
 
         for (int i = 0; i < weapons.Length; i++)
@@ -37,6 +36,12 @@ public class CharacterStat : MonoBehaviour
             yield return new WaitForSeconds(1);
             deleyed = true;
         }
+    }
+
+    public void StartStat()
+    {
+        if (GetComponent<Player>() == null) AddExp(Random.Range(0, 15));
+        else AddExp(0);
     }
     public void Hit(float amountDamage, float amountExp)
     {
@@ -84,7 +89,7 @@ public class CharacterStat : MonoBehaviour
         levelText.text = "Level " + level;
 
         if (!deleyed) return;
-        for (var i = LevelManager.instance.unlockWeapon.Length - 1; i >= 0; i--)
+        for (int i = LevelManager.instance.unlockWeapon.Length - 1; i >= 0; i--)
         {
             if (level >= LevelManager.instance.unlockWeapon[i] && !unlock[i])
             {
