@@ -1312,8 +1312,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9811321, g: 0, b: 0.9316851, a: 1}
-        key1: {r: 0.15136719, g: 1, b: 0, a: 1}
+        key0: {r: 0.98039216, g: 0, b: 0.08756787, a: 1}
+        key1: {r: 0.5411765, g: 0, b: 0.26002407, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0.9019608}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4826,8 +4826,8 @@ GameObject:
   - component: {fileID: 4051063110935674128}
   - component: {fileID: 5710474326976080046}
   - component: {fileID: 2899621002661484998}
-  m_Layer: 0
-  m_Name: 1 Piscok
+  m_Layer: 1
+  m_Name: 1 Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4846,6 +4846,7 @@ Transform:
   m_Children:
   - {fileID: 1158665789925702718}
   - {fileID: 3926724361544483070}
+  - {fileID: 481765561824376316}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4875,7 +4876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0096ce6c010c9c74287a276605146880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  efectSentuhan: {fileID: 0}
+  efectSentuhan: {fileID: 481765561824376291}
   projectile: {fileID: 0}
   efectSpawn: {fileID: 0}
   efeckPerticle: {fileID: 8477863007901028542}
@@ -6213,10 +6214,10 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.8666667, g: 0.07058823, b: 0.7601753, a: 0}
-        key1: {r: 1, g: 0, b: 0.3275633, a: 1}
+        key0: {r: 0.58431375, g: 0.0658597, b: 0.10931365, a: 0}
+        key1: {r: 0.6981132, g: 0, b: 0.02305837, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 1}
-        key3: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 1}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -6231,15 +6232,15 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 7710
-        atime2: 60716
-        atime3: 65535
-        atime4: 0
+        atime2: 51657
+        atime3: 60716
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 4
+        m_NumAlphaKeys: 5
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9714,3 +9715,70 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1001 &2114429964940839958
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3120602433173521531}
+    m_Modifications:
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015472847793912311, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+      propertyPath: m_Name
+      value: Hit Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+--- !u!4 &481765561824376316 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2015472847793912298, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+  m_PrefabInstance: {fileID: 2114429964940839958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &481765561824376291 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2015472847793912309, guid: 0c382accc5ce1014189c206174b122f3, type: 3}
+  m_PrefabInstance: {fileID: 2114429964940839958}
+  m_PrefabAsset: {fileID: 0}

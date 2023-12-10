@@ -31,6 +31,11 @@ public class WeaponData : MonoBehaviour
 
     private void OnEnable()
     {
+
+    }
+
+    public void StartRandomActive()
+    {
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {

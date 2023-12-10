@@ -16,6 +16,7 @@ public class StatProjectile : MonoBehaviour
         }
         else
         {
+            Debug.Log(other.gameObject);
             GetComponent<EfectProjectile>().Stop(0);
         }
     }

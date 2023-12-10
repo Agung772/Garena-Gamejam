@@ -14,6 +14,8 @@ public class CharacterStat : MonoBehaviour
 
     public GameObject[] weapons;
     bool[] unlock;
+
+    bool deleyed;
     private void Start()
     {
         hp = maxHp;
@@ -29,7 +31,12 @@ public class CharacterStat : MonoBehaviour
             else weapons[i].SetActive(false);
         }
 
-
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            yield return new WaitForSeconds(1);
+            deleyed = true;
+        }
     }
     public void Hit(float amountDamage, float amountExp)
     {
@@ -72,11 +79,13 @@ public class CharacterStat : MonoBehaviour
         level += value;
         levelText.text = "Level " + level;
 
+        if (!deleyed) return;
         for (var i = LevelManager.instance.unlockWeapon.Length - 1; i >= 0; i--)
         {
             if (level >= LevelManager.instance.unlockWeapon[i] && !unlock[i])
             {
                 weapons[i].SetActive(true);
+                weapons[i].GetComponent<WeaponData>().StartRandomActive();
                 unlock[i] = true;
             }
         }
