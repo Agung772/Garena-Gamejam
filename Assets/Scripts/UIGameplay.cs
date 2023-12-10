@@ -20,6 +20,8 @@ public class UIGameplay : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.SetBGM(AudioManager.instance.gameplayBgm);
+
         allweaponUI.SetActive(true);
     }
 
@@ -51,10 +53,16 @@ public class UIGameplay : MonoBehaviour
                 weaponDatas[i].StartRandomActive();
             }
 
-            NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
-            for (int j = 0; j < nonPlayer.Length; j++)
+            CharacterStat[] characterStat = FindObjectsOfType<CharacterStat>();
+            for (int j = 0; j < characterStat.Length; j++)
             {
-                nonPlayer[j].Active(true);
+                characterStat[j].StartStat();
+            }
+
+            NonPlayer[] nonPlayer = FindObjectsOfType<NonPlayer>();
+            for (int k = 0; k < nonPlayer.Length; k++)
+            {
+                nonPlayer[k].Active(true);
             }
         }
         else

@@ -12,6 +12,7 @@ public class StatProjectile : MonoBehaviour
         if (other.GetComponent<CharacterStat>())
         {
             other.GetComponent<CharacterStat>().Hit(damage, level);
+
             GetComponent<EfectProjectile>().Stop(0);
         }
         else
