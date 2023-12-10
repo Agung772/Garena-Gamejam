@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expPrefab: {fileID: 245741342043288874, guid: 2f2945362b3719e4a8b3126edea20c9c, type: 3}
-  damageText: {fileID: 0}
+  damageText: {fileID: 8998582460790959263, guid: 5e3f76583b8e2d64b9a335f10af1e273, type: 3}
 --- !u!4 &273242061
 Transform:
   m_ObjectHideFlags: 0
@@ -5952,6 +5952,10 @@ PrefabInstance:
     - target: {fileID: 8281954652951496672, guid: 36eebbe7833fb7340bec244ce2ed6040, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281954654027921751, guid: 36eebbe7833fb7340bec244ce2ed6040, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36eebbe7833fb7340bec244ce2ed6040, type: 3}

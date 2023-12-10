@@ -48,6 +48,10 @@ public class CharacterStat : MonoBehaviour
         hp -= amountDamage + damageBonus;
         barHP.fillAmount = hp / maxHp;
 
+        GameObject damageText = Instantiate(AssetGameplay.instance.damageText, transform.position, Quaternion.identity);
+        damageText.GetComponent<DamageText>().valueText.text = (amountDamage + damageBonus).ToString("F0");
+        Destroy(damageText.gameObject, 1);
+
         Debug.Log("Damage bonus " + damageBonus + " Total damage " + (amountDamage + damageBonus));
         AudioManager.instance.SetSFX(AudioManager.instance.SFXHit);
 

@@ -20,6 +20,8 @@ public class UIGameplay : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.SetBGM(AudioManager.instance.gameplayBgm);
+
         allweaponUI.SetActive(true);
     }
 

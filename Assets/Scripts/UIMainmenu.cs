@@ -8,6 +8,8 @@ public class UIMainmenu : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.SetBGM(AudioManager.instance.mainmenuBgm);
+
         highLevelText.text = "High Level : " + DataGame.instance.dataClass.highLevel;
     }
 

@@ -16,5 +16,9 @@ public class Exp : MonoBehaviour
 
             Destroy(gameObject);
         }
+        if (other.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
