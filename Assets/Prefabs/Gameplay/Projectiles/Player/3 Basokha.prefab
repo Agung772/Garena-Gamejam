@@ -4882,6 +4882,7 @@ MonoBehaviour:
   efectSpawn: {fileID: 0}
   efeckPerticle: {fileID: 7170658792228874286}
   beamParticle: {fileID: 0}
+  explosion: {fileID: 721018878912313560}
 --- !u!54 &6420876841873920062
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9729,15 +9730,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2453797220256228151, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0354451
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2453797220256228151, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2453797220256228151, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.52
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 2453797220256228151, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9771,8 +9772,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3 Explosion
       objectReference: {fileID: 0}
+    - target: {fileID: 7841255081964035050, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
+--- !u!1 &721018878912313560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7841255081964035050, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}
+  m_PrefabInstance: {fileID: 7408466649006367538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4962274888660074501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2453797220256228151, guid: 09612bad5127d7647a7a49d58b0a3fd3, type: 3}

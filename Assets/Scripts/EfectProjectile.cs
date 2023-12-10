@@ -6,6 +6,8 @@ public class EfectProjectile : MonoBehaviour
 {
     public ParticleSystem efectSentuhan, projectile, efectSpawn, efeckPerticle, beamParticle;
 
+    public GameObject explosion;
+
 
     private void Start()
     {
@@ -22,6 +24,10 @@ public class EfectProjectile : MonoBehaviour
             if (efeckPerticle != null) efeckPerticle.Stop();
             if (efeckPerticle != null) efeckPerticle.transform.parent = null;
             if (efeckPerticle != null) Destroy(efeckPerticle.gameObject, 2);
+
+            if (explosion != null) explosion.SetActive(true);
+            if (explosion != null) explosion.transform.parent = null;
+            if (explosion != null) Destroy(explosion, 2);
 
             Destroy(gameObject);
         }

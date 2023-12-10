@@ -36,8 +36,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    bool cooldownScene;
     public void MovingScene(string nameScene)
     {
+        if (cooldownScene) return;
+        cooldownScene = true;
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {
@@ -51,6 +54,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
             transisiAnimator.SetTrigger("Exit");
             yield return new WaitForSeconds(1.5f);
+            cooldownScene = false;
             transisiAnimator.gameObject.SetActive(false);
         }
     }
