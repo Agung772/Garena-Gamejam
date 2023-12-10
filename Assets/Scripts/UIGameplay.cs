@@ -10,8 +10,12 @@ public class UIGameplay : MonoBehaviour
 
     public GameObject gameoverUI;
     public GameObject allweaponUI;
+    [SerializeField] GameObject pauseUI;
+
     public TextMeshProUGUI highLevelText;
     public TextMeshProUGUI levelText;
+
+
 
     private void Awake()
     {
@@ -86,6 +90,21 @@ public class UIGameplay : MonoBehaviour
 
     public void MovingScene(string nameScene)
     {
+        Time.timeScale = 1;
         GameManager.instance.MovingScene(nameScene);
+    }
+
+    public void PauseUI(bool value)
+    {
+        if (value)
+        {
+            Time.timeScale = 0;
+            pauseUI.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseUI.SetActive(false);
+        }
     }
 }

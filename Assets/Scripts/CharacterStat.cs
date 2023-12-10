@@ -16,6 +16,8 @@ public class CharacterStat : MonoBehaviour
     bool[] unlock;
 
     bool deleyed;
+
+    public bool boss;
     private void Start()
     {
         hp = maxHp;
@@ -40,7 +42,8 @@ public class CharacterStat : MonoBehaviour
 
     public void StartStat()
     {
-        if (GetComponent<Player>() == null) AddExp(Random.Range(0, 15));
+        if (boss) AddExp(Random.Range(100, 200));
+        else if (GetComponent<Player>() == null) AddExp(Random.Range(0, 15));
         else AddExp(0);
     }
     public void Hit(float amountDamage, float amountExp)
