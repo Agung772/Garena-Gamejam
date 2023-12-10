@@ -44,7 +44,7 @@ public class DataGame : MonoBehaviour
         else
         {
 
-            dataClass.volumeBGM = 0.65f;
+            dataClass.volumeBGM = 0.7f;
             dataClass.volumeSFX = 0.8f;
         }
 
